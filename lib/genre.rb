@@ -8,10 +8,10 @@ class Genre
   end
 
   def songs
+    Song.all.select{|song| song.genre == self}
   end
   def artists
-    @artists = Song.all.collect{|song| song.genre == self}.map{|song| song.artist}
-    return @artists
+    songs.map{|song| song.artist}
   end
 
 end
