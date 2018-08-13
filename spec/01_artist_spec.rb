@@ -32,25 +32,25 @@ describe "Artist" do
     end
   end
 
-  # describe "#songs" do
-  #   it "has many songs" do
-  #     jay_z = Artist.new("Jay-Z")
-  #     rap = Genre.new("rap")
-  #     ninety_nine_problems = jay_z.new_song("Ninety Nine Problems", rap)
+  describe "#songs" do
+    it "has many songs" do
+      jay_z = Artist.new("Jay-Z")
+      rap = Genre.new("rap")
+      ninety_nine_problems = jay_z.new_song("Ninety Nine Problems", rap)
 
-  #     expect(jay_z.songs).to include(ninety_nine_problems)
-  #   end
-  # end
+      expect(jay_z.songs).to include(ninety_nine_problems)
+    end
+  end
 
-  # describe "#genres" do
-  #   it "has many genres, through songs" do
-  #     jay_z = Artist.new("Jay-Z")
-  #     rap = Genre.new("rap")
-  #     ninety_nine_problems = jay_z.new_song("Ninety Nine Problems", rap)
+  describe "#genres" do
+    it "has many genres, through songs" do
+      jay_z = Artist.new("Jay-Z")
+      rap = Genre.new("rap")
+      ninety_nine_problems = jay_z.new_song("Ninety Nine Problems", rap)
 
-  #     expect(jay_z.genres).to include(rap)
-  #     expect(jay_z.songs.first.genre).to eq(rap)
-  #   end
-  # end
+      expect(jay_z.genres).to include(rap)
+      expect(jay_z.songs.first.genre).to eq(rap)
+    end
+  end
 
 end
