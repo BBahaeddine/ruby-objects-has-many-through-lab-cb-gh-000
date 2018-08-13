@@ -1,4 +1,4 @@
-class Appointment
+class Appo
   attr_accessor :date
   attr_accessor :doctor
   attr_accessor :patient
