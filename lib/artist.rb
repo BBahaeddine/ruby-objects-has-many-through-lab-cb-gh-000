@@ -8,7 +8,7 @@ class Artist
   end
   
   def new_song(name, genre)
-    Song.new(name,self, genre)
+    Song.new(name, self, genre)
   end
   
   def self.all 
@@ -16,7 +16,7 @@ class Artist
   end
   
   def songs
-    Song.all.collect{|song| song.artist == self}
+    Song.all.select{|song| song.artist == self}
   end
   
   def genres
