@@ -18,8 +18,9 @@ class Artist
   def songs
     Song.all.collect{|song| song.artist == self}
   end
+  
   def genres
-    return Song.all.collect{|song| song.artist == self}.map{|song| song.genre}
+    return songs.collect{|song| song.genre}
   end
   
 end
